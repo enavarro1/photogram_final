@@ -56,7 +56,11 @@
       </dt>
       <!-- Display poster_id start -->
       <dd>
-        <%= @photo.poster_id %>
+        <% if @photo.poster.present? %>
+          <a href="/users/<%= @photo.poster_id %>">
+            <%= @photo.poster.email %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display poster_id end -->
 

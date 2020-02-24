@@ -82,7 +82,11 @@
 
         <!-- Display photo.poster_id start -->
         <td>
-          <%= photo.poster.email %>
+          <% if photo.poster.present? %>
+            <a href="/users/<%= photo.poster.id %>">
+              <%= photo.poster.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display photo.poster_id end -->
 
