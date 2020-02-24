@@ -46,7 +46,7 @@ class PhotosController < ApplicationController
 
     @photo.caption = params.fetch("caption")
     @photo.image = params.fetch("image")
-    @photo.poster_id = params.fetch("poster_id")
+    
     @photo.comments_count = params.fetch("comments_count")
     @photo.likes_count = params.fetch("likes_count")
 

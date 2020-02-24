@@ -34,15 +34,9 @@
   <!-- Label and input for image end -->
 
   <!-- Label and input for poster_id start -->
-  <div class="form-group">
-    <label for="poster_id">
-      Poster
-    </label>
-
-    <!-- Input for poster_id start -->
-    <%= select_tag(:poster_id, options_from_collection_for_select(User.all, :id, :email, @photo.poster_id), :class => "form-control") %>
-    <!-- Input for poster_id end -->
-  </div>
+  <!-- Input for "poster_id" start -->
+  <input type="hidden" name="poster_id" value="<%= current_user.id %>">
+  <!-- Input for "poster_id" end -->
   <!-- Label and input for poster_id end -->
 
   <!-- Label and input for comments_count start -->
